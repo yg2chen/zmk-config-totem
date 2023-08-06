@@ -43,25 +43,13 @@
     };
 
     behaviors {
-        fn1: fn1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "FN1";
-            bindings =
-                <&kp>,
-                <&mo>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <0>;
-            tapping-term-ms = <165>;
-        };
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD0";
             #binding-cells = <0>;
             bindings =
                 <&kp SPACE>,
-                <&kp ESCAPE>,
-                <&fn1 SPACE 1>;
+                <&kp ESCAPE>;
 
             tapping-term-ms = <165>;
         };
