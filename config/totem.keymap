@@ -48,8 +48,8 @@
             label = "TD0";
             #binding-cells = <0>;
             bindings =
-                <&kp SPACE>,
-                <&kp ESCAPE>;
+                <&mt0 SPACE 1>,
+                <&mt ESCAPE LCTRL>;
 
             tapping-term-ms = <165>;
         };
@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MT0";
             bindings =
-                <&td0>,
+                <&kp>,
                 <&mo>;
 
             #binding-cells = <2>;
@@ -88,10 +88,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q  &kp W      &kp E     &kp R        &kp T        &kp Y          &kp U          &kp I    &kp O          &kp P
-              &kp A  &kp S      &kp D     &kp F        &kp G        &kp H          &kp J          &kp K    &kp L  &kp SEMICOLON
-&mt CAPS TAB  &kp Z  &kp X      &kp C     &kp V        &kp B        &kp N          &kp M      &kp COMMA  &kp DOT       &kp FSLH  &kp RIGHT_SHIFT
-                            &kp LCTRL  &mt0 0 1  &lt 1 SPACE  &lt 2 ENTER  &kp BACKSPACE  &kp RIGHT_ALT
+              &kp Q  &kp W      &kp E  &kp R        &kp T        &kp Y          &kp U          &kp I    &kp O          &kp P
+              &kp A  &kp S      &kp D  &kp F        &kp G        &kp H          &kp J          &kp K    &kp L  &kp SEMICOLON
+&mt CAPS TAB  &kp Z  &kp X      &kp C  &kp V        &kp B        &kp N          &kp M      &kp COMMA  &kp DOT       &kp FSLH  &kp RIGHT_SHIFT
+                            &kp LCTRL   &td0  &lt 1 SPACE  &lt 2 ENTER  &kp BACKSPACE  &kp RIGHT_ALT
             >;
         };
 
