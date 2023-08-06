@@ -49,7 +49,7 @@
             #binding-cells = <0>;
             bindings =
                 <&mt0 1 SPACE>,
-                <&mt ESCAPE LCTRL>;
+                <&mt LCTRL ESCAPE>;
 
             tapping-term-ms = <165>;
         };
