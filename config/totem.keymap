@@ -43,6 +43,28 @@
     };
 
     behaviors {
+        fn1: fn1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FN1";
+            bindings =
+                <&kp>,
+                <&mo>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <0>;
+            tapping-term-ms = <165>;
+        };
+        td0: td0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD0";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SPACE>,
+                <&kp ESCAPE>,
+                <&fn1 Q 1>;
+
+            tapping-term-ms = <165>;
+        };
     };
 
     keymap {
@@ -67,7 +89,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp Q  &kp W      &kp E         &kp R        &kp T        &kp Y          &kp U          &kp I    &kp O          &kp P
+               &td0  &kp W      &kp E         &kp R        &kp T        &kp Y          &kp U          &kp I    &kp O          &kp P
               &kp A  &kp S      &kp D         &kp F        &kp G        &kp H          &kp J          &kp K    &kp L  &kp SEMICOLON
 &mt CAPS TAB  &kp Z  &kp X      &kp C         &kp V        &kp B        &kp N          &kp M      &kp COMMA  &kp DOT       &kp FSLH  &kp RIGHT_SHIFT
                             &kp LCTRL  &kp LEFT_WIN  &lt 1 SPACE  &lt 2 ENTER  &kp BACKSPACE  &kp RIGHT_ALT
