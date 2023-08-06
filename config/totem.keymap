@@ -193,9 +193,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp HOME     &kp PAGE_UP    &kp UP_ARROW    &kp PAGE_DOWN    &kp K_VOLUME_UP
-               &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6         &kp EQUAL          &kp MINUS     &kp END  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp K_VOLUME_DOWN
-&kp BACKSPACE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0         &kp PERIOD  &bt BT_CLR      &bt BT_NXT      &bt BT_PRV       &sys_reset         &kp K_MUTE  &kp PRINTSCREEN
+               &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp HOME     &kp PAGE_UP    &kp UP_ARROW    &kp PAGE_DOWN  &kp C_VOL_UP
+               &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6         &kp EQUAL          &kp MINUS     &kp END  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp C_VOL_DN
+&kp BACKSPACE  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9      &kp NUMBER_0         &kp PERIOD  &bt BT_CLR      &bt BT_NXT      &bt BT_PRV       &sys_reset    &kp C_MUTE  &kp PRINTSCREEN
                                                &kp LGUI            &trans          &kp SPACE  &kp DELETE          &trans        &kp RALT
             >;
         };
