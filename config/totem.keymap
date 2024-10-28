@@ -90,14 +90,14 @@
 
         combo_bslash {
             bindings = <&kp BSLH>;
-            key-positions = <6 16>;
+            key-positions = <5 15>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_grave {
             bindings = <&kp GRAVE>;
-            key-positions = <8 18>;
+            key-positions = <26 15 26>;
             timeout-ms = <50>;
             layers = <0>;
         };
