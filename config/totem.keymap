@@ -47,14 +47,14 @@
         };
 
         combo_lbrkt {
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp LBKT>;
             key-positions = <6 16>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         combo_rbrkt {
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp RBKT>;
             key-positions = <18 18 8 18>;
             timeout-ms = <50>;
             layers = <0>;
@@ -95,9 +95,9 @@
             layers = <0>;
         };
 
-        combo_grave {
+        combo_grve {
             bindings = <&kp GRAVE>;
-            key-positions = <26 15 26>;
+            key-positions = <9 19>;
             timeout-ms = <50>;
             layers = <0>;
         };
