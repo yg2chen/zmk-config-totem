@@ -35,82 +35,68 @@
         combo_lpar {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 17>;
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_rpar {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <17 18>;
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_lbrkt {
             bindings = <&kp LBKT>;
-            key-positions = <6 16>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_rbrkt {
-            bindings = <&kp RBKT>;
-            key-positions = <18 18 8 18>;
-            timeout-ms = <50>;
+            key-positions = <6 7>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <29 30>;
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_plus {
             bindings = <&kp PLUS>;
             key-positions = <16 27>;
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_eq {
             bindings = <&kp EQUAL>;
             key-positions = <17 28>;
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <18 29>;
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_bslash {
             bindings = <&kp BSLH>;
             key-positions = <5 15>;
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             layers = <0>;
         };
 
         combo_grve {
             bindings = <&kp GRAVE>;
             key-positions = <9 19>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        combo_lbrce {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <6 7>;
             timeout-ms = <25>;
             layers = <0>;
         };
 
-        combo_rbrce {
-            bindings = <&kp RIGHT_BRACE>;
+        combo_rbrkt {
+            bindings = <&kp RBKT>;
             key-positions = <7 8>;
             timeout-ms = <25>;
             layers = <0>;
