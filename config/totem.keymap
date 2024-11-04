@@ -145,6 +145,13 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 25 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>;
             hold-trigger-on-release;
         };
+
+        caps_k: caps_k {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_K";
+            #binding-cells = <0>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+        };
     };
 
     keymap {
