@@ -197,7 +197,7 @@
         nav {
             bindings = <
         &trans    &trans    &trans     &trans      &trans  &trans      &trans    &trans         &trans       &trans
-        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans  &trans      &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT
+        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans  &kp CAPS    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT
 &trans  &trans    &trans    &trans     &trans      &trans  &kp INSERT  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
                             &trans     &trans      &trans  &trans      &trans    &trans
             >;
@@ -214,9 +214,9 @@
 
         media {
             bindings = <
-             &trans    &trans    &trans     &trans      &trans  &trans        &trans           &trans             &trans        &trans
+             &trans    &trans    &trans     &trans      &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4
              &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &trans  &bt BT_CLR    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_MUTE    &kp C_PLAY
-&bootloader  &trans    &trans    &trans     &trans      &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
+&bootloader  &trans    &trans    &trans     &trans      &trans  &trans        &kp C_NEXT       &kp C_PREV         &kp C_FF      &kp C_REWIND  &bootloader
                                  &trans     &trans      &trans  &trans        &trans           &trans
             >;
         };
