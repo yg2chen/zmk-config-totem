@@ -37,6 +37,7 @@
             key-positions = <16 17>;
             timeout-ms = <25>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_rpar {
@@ -44,62 +45,151 @@
             key-positions = <17 18>;
             timeout-ms = <25>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
-        combo_lbrkt {
-            bindings = <&kp LBKT>;
-            key-positions = <6 7>;
+        combo_lbkt {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <28 27>;
             timeout-ms = <25>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
-        combo_underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <29 30>;
+        combo_rbkt {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <29 28>;
             timeout-ms = <25>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_at {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <1 11>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_hash {
+            bindings = <&kp HASH>;
+            key-positions = <2 12>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <3 13>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <4 14>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_caret {
+            bindings = <&kp CARET>;
+            key-positions = <5 15>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <27 28>;
+            key-positions = <6 16>;
             timeout-ms = <25>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
-        combo_eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <17 28>;
+        combo_mult {
+            bindings = <&kp ASTERISK>;
+            key-positions = <7 17>;
             timeout-ms = <25>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <8 18>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <15 26>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <18 29>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <11 22>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_bslh {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <12 23>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <13 24>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <14 25>;
+            timeout-ms = <25>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <29 28>;
+            key-positions = <16 27>;
             timeout-ms = <25>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
-        combo_bslash {
-            bindings = <&kp BSLH>;
-            key-positions = <5 15>;
+        combo_div {
+            bindings = <&kp SLASH>;
+            key-positions = <17 28>;
             timeout-ms = <25>;
             layers = <0>;
-        };
-
-        combo_grve {
-            bindings = <&kp GRAVE>;
-            key-positions = <9 19>;
-            timeout-ms = <25>;
-            layers = <0>;
-        };
-
-        combo_rbrkt {
-            bindings = <&kp RBKT>;
-            key-positions = <7 8>;
-            timeout-ms = <25>;
-            layers = <0>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -146,11 +236,36 @@
             hold-trigger-on-release;
         };
 
-        caps_k: caps_k {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS_K";
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_SHIFT";
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+
             #binding-cells = <0>;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        smart_shift_mo: smart_shift_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SMART_SHIFT_MO";
+            bindings = <&mo>, <&smart_shift>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 35 36 37 32 33 34>;
+            hold-trigger-on-release;
+        };
+
+        morph_question_excl: morph_question_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_QUESTION_EXCL";
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -176,10 +291,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q         &kp W         &kp E               &kp R               &kp T      &kp Y               &kp U                &kp I               &kp O         &kp P
-            &hm_l LGUI A  &hm_l LALT S  &hm_l LCTRL D       &hm_l LEFT_SHIFT F  &kp G      &kp H               &hm_r RIGHT_SHIFT J  &hm_r RCTRL K       &hm_r RALT L  &hm_r RGUI SEMICOLON
-&kp ESCAPE  &kp Z         &kp X         &kp C               &kp V               &kp B      &kp N               &kp M                &kp COMMA           &kp DOT       &kp FSLH              &kp APOSTROPHE
-                                        &tap_mod_k 4 LCTRL  &tap_mod_k 2 TAB    &kp SPACE  &tap_mod_k 1 ENTER  &kp BACKSPACE        &tap_mod_k 3 RSHFT
+            &kp Q         &kp W         &kp E                &kp R               &kp T      &kp Y               &kp U                &kp I               &kp O         &kp P
+            &hm_l LGUI A  &hm_l LALT S  &hm_l LCTRL D        &hm_l LEFT_SHIFT F  &kp G      &kp H               &hm_r RIGHT_SHIFT J  &hm_r RCTRL K       &hm_r RALT L  &hm_r RGUI SEMICOLON
+&kp ESCAPE  &kp Z         &kp X         &kp C                &kp V               &kp B      &kp N               &kp M                &kp COMMA           &kp DOT       &morph_question_excl  &kp APOSTROPHE
+                                        &smart_shift_mo 4 0  &tap_mod_k 2 TAB    &kp SPACE  &tap_mod_k 1 ENTER  &kp BACKSPACE        &tap_mod_k 3 RSHFT
             >;
         };
 
