@@ -250,7 +250,7 @@
          &kp Q         &kp W         &kp E           &kp R            &kp T              &kp Y              &kp U                 &kp I           &kp O         &kp P
          &hm_l LGUI A  &hm_l LALT S  &hm_l LSHIFT D  &hm_l LCTRL F    &kp G              &kp H              &hm_r RCTRL J         &hm_r RSHIFT K  &hm_r RALT L  &hm_r RGUI SEMICOLON
 &kp TAB  &kp Z         &kp X         &kp C           &kp V            &kp B              &kp N              &kp M                 &kp COMMA       &kp DOT       &kp SLASH             &kp APOSTROPHE
-                                     &smart_num 1    &smart_shift     &tap_mo_l 2 SPACE  &tap_mo_r 4 ENTER  &morph_backspace_del  &kp ESC
+                                     &smart_num 1 0    &smart_shift     &tap_mo_l 2 SPACE  &tap_mo_r 4 ENTER  &morph_backspace_del  &kp ESC
             >;
         };
 
