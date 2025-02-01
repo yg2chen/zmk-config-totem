@@ -13,6 +13,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/num_word.dtsi>
 
 #define BASE 0
 #define NAV  1
@@ -146,6 +147,28 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+		num_dance: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+			label = "NUM_DANCE";
+
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&num_word 1>, <&sl 1>;
+		};
+
+		smart_num: smart_num {
+            compatible = "zmk,behavior-hold-tap";
+			label = "SMART_NUM";
+			bindings = <&num_dance>, <&mo>;
+		
+			#binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+
+		};
+
         morph_lpar_lt: morph_lpar_lt {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_LPAR_LT";
@@ -227,7 +250,7 @@
          &kp Q         &kp W         &kp E           &kp R            &kp T              &kp Y              &kp U                 &kp I           &kp O         &kp P
          &hm_l LGUI A  &hm_l LALT S  &hm_l LSHIFT D  &hm_l LCTRL F    &kp G              &kp H              &hm_r RCTRL J         &hm_r RSHIFT K  &hm_r RALT L  &hm_r RGUI SEMICOLON
 &kp TAB  &kp Z         &kp X         &kp C           &kp V            &kp B              &kp N              &kp M                 &kp COMMA       &kp DOT       &kp SLASH             &kp APOSTROPHE
-                                     &mo 3           &tap_mo_l 1 ESC  &tap_mo_l 2 SPACE  &tap_mo_r 4 ENTER  &morph_backspace_del  &smart_shift
+                                     &smart_shift    &smart_num 1     &tap_mo_l 2 SPACE  &tap_mo_r 4 ENTER  &morph_backspace_del  &kp ESC
             >;
         };
 
